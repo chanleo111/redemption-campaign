@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/redemption-campaign/static/css/main.e6c13ad2.css",
+    "main.js": "/redemption-campaign/static/js/main.76a7c161.js",
+    "static/js/488.d37cd611.chunk.js": "/redemption-campaign/static/js/488.d37cd611.chunk.js",
+    "index.html": "/redemption-campaign/index.html",
+    "main.e6c13ad2.css.map": "/redemption-campaign/static/css/main.e6c13ad2.css.map",
+    "main.76a7c161.js.map": "/redemption-campaign/static/js/main.76a7c161.js.map",
+    "488.d37cd611.chunk.js.map": "/redemption-campaign/static/js/488.d37cd611.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.76a7c161.js"
+  ]
+}
