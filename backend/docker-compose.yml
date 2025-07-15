@@ -1,0 +1,59 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: redemption-app
+    ports:
+     - "8001:8001"
+    volumes:
+       - "D:/web/redemption-campaign/backend/.env:/var/www/html/.env:ro"
+       - "D:/web/redemption-campaign/backend:/var/www/html"
+    working_dir: /var/www/html
+    depends_on:
+      mysql:
+        condition: service_healthy
+    environment:
+      DB_HOST: mysql
+      DB_PORT: 3306
+      DB_DATABASE: redemption_campaign
+      DB_USERNAME: root
+      DB_PASSWORD: secret
+    networks:
+      - app-network 
+  webserver:
+    image: nginx:alpine
+    container_name: redemption-webserver
+    ports:
+      - "8000:80"
+    volumes:
+      - .:/var/www/html
+      - ./docker/nginx:/etc/nginx/conf.d
+    depends_on:
+      - app
+
+  mysql:
+    image: mysql:8.0
+    container_name: redemption-mysql
+    ports:
+      - "3307:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: secret
+      MYSQL_DATABASE: redemption_campaign
+      MYSQL_USER: redemption_user
+      MYSQL_PASSWORD: password
+    volumes:
+      - mysql_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      timeout: 20s
+      interval: 10s
+      retries: 10
+    networks:
+      - app-network
+volumes:
+  mysql_data:
+networks:              # 明确定义网络
+  app-network:
+    driver: bridge
+    name: app-network
