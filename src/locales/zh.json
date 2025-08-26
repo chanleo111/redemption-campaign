@@ -1,0 +1,49 @@
+{
+  "login": {
+    "title": "登錄",
+    "phonePlaceholder": "手機號碼",
+    "passwordPlaceholder": "密碼",
+    "submit": "登錄",
+    "registerLink": "註冊新賬戶",
+    "success": "登錄成功！",
+    "error": "登錄失敗"
+  },
+  "register": {
+    "title": "註冊",
+    "phoneLabel": "手機號碼",
+    "emailLabel": "電郵",
+    "passwordLabel": "密碼",
+    "confirmPasswordLabel": "確認密碼",
+    "smsCodeLabel": "SMS Verification Code",
+    "emailCodeLabel": "Email Verification Code",
+    "sendCode": "Send Code",
+    "submit": "Register",
+    "success": "Registration successful!",
+    "methodSMS": "SMS Verification",
+    "methodEmail": "Email Verification"
+  },
+  "dashboard": {
+    "title": "用戶儀表板",
+    "stats.currentPoints": "當前積分",
+    "stats.availableCoupons": "可用優惠券",
+    "stats.monthRedemptions": "本月兌換",
+    "points.progress": "積分進度",
+    "points.monthGoal": "本月目標",
+    "points.monthProgress": "已獲得 {{current}}/{{total}} 積分",
+    "quickActions": "快速操作",
+    "quick.dailyDraw": "每日抽獎",
+    "quick.exchangeCoupons": "兌換優惠券",
+    "recentActivities": "最近活動",
+    "recentRedemptions": "最近兌換",
+    "current.score":"Current Score",
+    "redemption.record":"Redemption Record"
+  },
+  "menu": {
+    "dashboard": "首頁",
+    "coupons": "優惠券",
+    "luckyDraw": "抽獎",
+    "redemptions": "兌換",
+    "profile":"帳戶資料",
+    "logout":"登出"
+  }
+}

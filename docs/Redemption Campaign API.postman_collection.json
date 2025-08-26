@@ -1,0 +1,1270 @@
+{
+	"info": {
+		"_postman_id": "14a129eb-200b-4ac2-863b-30ff623b2f5f",
+		"name": "Redemption Campaign API",
+		"description": "API collection for managing user registration, lucky draws, coupons, and redemptions with multi-language support.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "44568643"
+	},
+	"item": [
+		{
+			"name": "User Registration - SMS Method",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "multipart/form-data"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "phone_number",
+							"value": "96253418",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "dkeqt313",
+							"type": "text"
+						},
+						{
+							"key": "sms_code",
+							"value": "689412",
+							"type": "text"
+						},
+						{
+							"key": "language",
+							"value": "en",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "cdaq@google.com",
+							"type": "text"
+						},
+						{
+							"key": "method",
+							"value": "sms",
+							"type": "text"
+						}
+					]
+				},
+				"url": "{{base_url}}/api/v1/register"
+			},
+			"response": [
+				{
+					"name": "Success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "phone_number",
+									"value": "96253418",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "dkeqt313",
+									"type": "text"
+								},
+								{
+									"key": "sms_code",
+									"value": "689412",
+									"type": "text"
+								},
+								{
+									"key": "language",
+									"value": "en",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "cdaq@google.com",
+									"type": "text"
+								},
+								{
+									"key": "method",
+									"value": "sms",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{base_url}}/api/v1/register"
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "Response content type",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"user_id\": 1,\n    \"phone_number\": \"96253418\",\n    \"points_balance\": 0,\n    \"language\": \"en\"\n}"
+				},
+				{
+					"name": "Invalid SMS Code",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "phone_number",
+									"value": "96253418",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "dkeqt313",
+									"type": "text"
+								},
+								{
+									"key": "sms_code",
+									"value": "123456",
+									"type": "text"
+								},
+								{
+									"key": "language",
+									"value": "en",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "cdaq@google.com",
+									"type": "text"
+								},
+								{
+									"key": "method",
+									"value": "sms",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{base_url}}/api/v1/register"
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "Response content type",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"error\",\n    \"message\": \"Invalid SMS verification code\"\n}"
+				}
+			]
+		},
+		{
+			"name": "User Registration - Email Method",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "multipart/form-data"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "phone_number",
+							"value": "63205215",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "921Dew03",
+							"type": "text"
+						},
+						{
+							"key": "email_code",
+							"value": "X7K9P2",
+							"type": "text"
+						},
+						{
+							"key": "language",
+							"value": "en",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "test@google.com",
+							"type": "text"
+						},
+						{
+							"key": "method",
+							"value": "email",
+							"type": "text"
+						}
+					]
+				},
+				"url": "{{base_url}}/api/v1/register"
+			},
+			"response": [
+				{
+					"name": "Success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "phone_number",
+									"value": "63205215",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "921Dew03",
+									"type": "text"
+								},
+								{
+									"key": "email_code",
+									"value": "X7K9P2",
+									"type": "text"
+								},
+								{
+									"key": "language",
+									"value": "en",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "test@google.com",
+									"type": "text"
+								},
+								{
+									"key": "method",
+									"value": "email",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{base_url}}/api/v1/register"
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "Response content type",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"user_id\": 2,\n    \"phone_number\": \"63205215\",\n    \"points_balance\": 0,\n    \"language\": \"en\"\n}"
+				},
+				{
+					"name": "Invalid Email Code",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "phone_number",
+									"value": "63205215",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "921Dew03",
+									"type": "text"
+								},
+								{
+									"key": "email_code",
+									"value": "ABC123",
+									"type": "text"
+								},
+								{
+									"key": "language",
+									"value": "en",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "test@google.com",
+									"type": "text"
+								},
+								{
+									"key": "method",
+									"value": "email",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{base_url}}/api/v1/register"
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "Response content type",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"error\",\n    \"message\": \"Invalid email verification code\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Send SMS Verification Code",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "multipart/form-data"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "phone_number",
+							"value": "96253418",
+							"type": "text"
+						}
+					]
+				},
+				"url": "{{base_url}}/api/v1/verification/sms"
+			},
+			"response": [
+				{
+					"name": "Success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "phone_number",
+									"value": "96253418",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{base_url}}/api/v1/verification/sms"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "Response content type",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"message\": \"Verification code sent to 96253418\",\n    \"phone_number\": \"96253418\"\n}"
+				},
+				{
+					"name": "Invalid Phone Number",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "phone_number",
+									"value": "invalid",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{base_url}}/api/v1/verification/sms"
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "Response content type",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"error\",\n    \"message\": \"Invalid phone number format\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Send Email Verification Code",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "multipart/form-data"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "test@gmail.com",
+							"type": "text"
+						}
+					]
+				},
+				"url": "{{base_url}}/api/v1/verification/email"
+			},
+			"response": [
+				{
+					"name": "Success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "test@gmail.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{base_url}}/api/v1/verification/email"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "Response content type",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"message\": \"Verification code sent to test@gmail.com\",\n    \"email\": \"test@gmail.com\"\n}"
+				},
+				{
+					"name": "Invalid Email",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "invalid",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{base_url}}/api/v1/verification/email"
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "Response content type",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"error\",\n    \"message\": \"Invalid email format\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Daily Lucky Draw",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "multipart/form-data"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{user_token}}"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": "{{base_url}}/api/v1/luckydraw"
+			},
+			"response": [
+				{
+					"name": "Success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{user_token}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "user_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{base_url}}/api/v1/luckydraw"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "Response content type",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"user_id\": 1,\n    \"points_earned\": 50,\n    \"points_balance\": 150,\n    \"last_draw_date\": \"2025-06-25T09:49:00Z\"\n}"
+				},
+				{
+					"name": "Already Drawn Today",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{user_token}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "user_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{base_url}}/api/v1/luckydraw"
+					},
+					"status": "Forbidden",
+					"code": 403,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "Response content type",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"error\",\n    \"message\": \"User has already participated in the lucky draw today\"\n}"
+				}
+			]
+		},
+		{
+			"name": "List Available Coupons",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/v1/coupons?language=en",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"coupons"
+					],
+					"query": [
+						{
+							"key": "language",
+							"value": "en"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success (English)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/coupons?language=en",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"coupons"
+							],
+							"query": [
+								{
+									"key": "language",
+									"value": "en"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "Response content type",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"coupons\": [\n        {\n            \"coupon_id\": 1,\n            \"name\": \"Discount Voucher\",\n            \"description\": \"Five dollar coupon\",\n            \"points\": 100,\n            \"quota\": 50,\n            \"valid_from\": \"2025-06-01T00:00:00Z\",\n            \"valid_to\": \"2025-12-31T23:59:59Z\",\n            \"status\": \"active\"\n        }\n    ]\n}"
+				},
+				{
+					"name": "Success (Chinese)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/coupons?language=zh",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"coupons"
+							],
+							"query": [
+								{
+									"key": "language",
+									"value": "zh"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "Response content type",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"coupons\": [\n        {\n            \"coupon_id\": 1,\n            \"name\": \"折扣券\",\n            \"description\": \"五美元优惠券\",\n            \"points\": 100,\n            \"quota\": 50,\n            \"valid_from\": \"2025-06-01T00:00:00Z\",\n            \"valid_to\": \"2025-12-31T23:59:59Z\",\n            \"status\": \"active\"\n        }\n    ]\n}"
+				},
+				{
+					"name": "Unsupported Language",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/coupons?language=fr",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"coupons"
+							],
+							"query": [
+								{
+									"key": "language",
+									"value": "fr"
+								}
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "Response content type",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"error\",\n    \"message\": \"Unsupported language\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Redeem Coupon",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "multipart/form-data"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{user_token}}"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "coupon_id",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": "{{base_url}}/api/v1/coupons/redeem"
+			},
+			"response": [
+				{
+					"name": "Success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{user_token}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "user_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "coupon_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{base_url}}/api/v1/coupons/redeem"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "Response content type",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"redemption_id\": 1,\n    \"user_id\": 1,\n    \"coupon_id\": 1,\n    \"qr_code\": \"X7K9P2M4Q8R3J5L1N6\",\n    \"qr_code_expiry_date\": \"2025-06-26T09:49:00Z\",\n    \"points_deducted\": 100,\n    \"points_balance\": 50\n}"
+				},
+				{
+					"name": "Insufficient Points",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{user_token}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "user_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "coupon_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{base_url}}/api/v1/coupons/redeem"
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "Response content type",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"error\",\n    \"message\": \"Insufficient points to redeem this coupon\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Update Coupon (CMS)",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "multipart/form-data"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{admin_token}}"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "quota",
+							"value": "50",
+							"type": "text"
+						},
+						{
+							"key": "points",
+							"value": "100",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "active",
+							"type": "text"
+						},
+						{
+							"key": "valid_from",
+							"value": "2025-06-25T09:49:00Z",
+							"type": "text"
+						},
+						{
+							"key": "valid_to",
+							"value": "2025-08-31T23:59:59Z",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "Five dollar coupon",
+							"type": "text"
+						}
+					]
+				},
+				"url": "{{base_url}}/api/v1/admin/coupons/1"
+			},
+			"response": [
+				{
+					"name": "Success",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{admin_token}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "quota",
+									"value": "40",
+									"type": "text"
+								},
+								{
+									"key": "points",
+									"value": "90",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "active",
+									"type": "text"
+								},
+								{
+									"key": "valid_from",
+									"value": "2025-06-25T09:49:00Z",
+									"type": "text"
+								},
+								{
+									"key": "valid_to",
+									"value": "2025-08-31T23:59:59Z",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Five dollar coupon",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{base_url}}/api/v1/admin/coupons/1"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "Response content type",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"coupon_id\": 1,\n    \"quota\": 40,\n    \"points\": 90,\n    \"valid_from\": \"2025-06-25T09:49:00Z\",\n    \"valid_to\": \"2025-08-31T23:59:59Z\",\n    \"description\": \"Five dollar coupon\"\n}"
+				},
+				{
+					"name": "Unauthorized",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{invalid_token}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "quota",
+									"value": "40",
+									"type": "text"
+								},
+								{
+									"key": "points",
+									"value": "90",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "active",
+									"type": "text"
+								},
+								{
+									"key": "valid_from",
+									"value": "2025-06-25T09:49:00Z",
+									"type": "text"
+								},
+								{
+									"key": "valid_to",
+									"value": "2025-08-31T23:59:59Z",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Five dollar coupon",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{base_url}}/api/v1/admin/coupons/1"
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "Response content type",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"error\",\n    \"message\": \"Invalid or missing authentication token\"\n}"
+				}
+			]
+		},
+		{
+			"name": "User login",
+			"request": {
+				"method": "POST",
+				"header": [
+				  {
+					"key": "Content-Type",
+					"value": "multipart/form-data"
+				  }
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "phone_number",
+							"value": "96253418",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "dkeqt313",
+							"type": "text"
+						}
+					]
+				},
+				"url": "{{base_url}}/api/v1/login"
+			},
+			"response": [
+				{
+					"name": "Success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "phone_number",
+									"value": "96253418",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "dkeqt313",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{base_url}}/api/v1/login"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\r\n  \"status\": \"success\",\r\n  \"user_id\": 1,\r\n  \"points_balance\": 0,\r\n  \"language\": \"en\",\r\n  \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9\"\r\n}"
+				},
+				{
+					"name": "Fail",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "phone_number",
+									"value": "96253418",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "dkeqt12",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{base_url}}/api/v1/login"
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\r\n    \"status\":\"error\",\r\n    \"message\": \"Invalid phone_number or password\"\r\n}"
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:3000",
+			"type": "string"
+		},
+		{
+			"key": "user_token",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+			"type": "string"
+		},
+		{
+			"key": "admin_token",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+			"type": "string"
+		},
+		{
+			"key": "invalid_token",
+			"value": "invalid-token",
+			"type": "string"
+		}
+	]
+}

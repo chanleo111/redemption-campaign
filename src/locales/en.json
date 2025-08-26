@@ -1,0 +1,49 @@
+{
+  "login": {
+    "title": "Login",
+    "phonePlaceholder": "Phone Number",
+    "passwordPlaceholder": "Password",
+    "submit": "Login",
+    "registerLink": "Register New Account",
+    "success": "Login successful!",
+    "error": "Login failed"
+  },
+  "register": {
+    "title": "Register",
+    "phoneLabel": "Phone Number",
+    "emailLabel": "Email",
+    "passwordLabel": "Password",
+    "confirmPasswordLabel": "Confirm Password",
+    "smsCodeLabel": "SMS Verification Code",
+    "emailCodeLabel": "Email Verification Code",
+    "sendCode": "Send Code",
+    "submit": "Register",
+    "success": "Registration successful!",
+    "methodSMS": "SMS Verification",
+    "methodEmail": "Email Verification"
+  },
+  "dashboard": {
+    "title": "User Dashboard",
+    "stats.currentPoints": "Current Points",
+    "stats.availableCoupons": "Available Coupons",
+    "stats.monthRedemptions": "Redemptions This Month",
+    "points.progress": "Points Progress",
+    "points.monthProgress": "Gained {{current}}/{{total}} points",
+    "quickActions": "Quick Actions",
+    "quick.dailyDraw": "Daily Lucky Draw",
+    "quick.exchangeCoupons": "Exchange Coupons",
+    "recentActivities": "Recent Activities",
+    "recentRedemptions": "Recent Redemptions",
+    "available coupons":"Available Coupons",
+    "current.score":"Current Score",
+    "redemption.record":"Redemption Record"
+  },
+  "menu": {
+    "dashboard": "Dashboard",
+    "coupons": "Coupons",
+    "luckyDraw": "LuckyDraw",
+    "redemptions": "Redemptions",
+    "profile":"profile",
+    "logout":"logout"
+  }
+}
