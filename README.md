@@ -1,6 +1,6 @@
 # Redemption Campaign API
 
-> **Status:** 🚧 Work in Progress
+> **Status:** Work in Progress
 
 Redemption Campaign is a redemption activity platform for managing user registration, verification, daily lucky draws, coupons, and coupon redemptions. It supports multi-language content for English ('en') and Chinese ('zh').
 
